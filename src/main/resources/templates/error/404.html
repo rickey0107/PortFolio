@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>404 Error</title>
+</head>
+
+<body>
+	<h1 th:text="${status} + ' ' + ${error}">tetle</h1>
+	<p>The request URL was not found on this server</p>
+	<p><a th:href="@{/training}">Back to Training Index</a></p>
+</body>
+
+</html>

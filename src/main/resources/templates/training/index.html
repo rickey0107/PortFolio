@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}">Insert title here</title>
+</head>
+
+<body>
+	<h1 th:text="${title}">title</h1>
+	<table>
+	<tr>
+		<th>id</th><th>menu</th><th>datetime</th>
+	</tr>
+	<tr th:each="training : ${trainingList}">
+		<td th:text="${training.id}">1</td>
+		<td th:text="${training.menu}">menu</td>
+			<td th:text="${training.datetime}">datetime</td>
+	</tr>
+	</table>
+</body>
+
+</html>

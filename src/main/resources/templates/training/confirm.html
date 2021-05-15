@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}">Insert title here</title>
+</head>
+
+<body>
+	<h1 th:text="${title}">title</h1>
+	<div th:object="${trainingForm}">
+	<p th:text="*{menu}"></p>
+	<form method="post" action="#" th:action="@{/training/form}">
+	<input type="hidden" name="menu" th:value="*{menu}">
+	<input type="submit" value="戻る">
+	</form>
+	<form method="post" action="#" th:action="@{/training/complete}">
+	<input type="hidden" name="menu" th:value="*{menu}">
+	<input type="submit" value="登録">
+	</form>
+	</div>
+</body>
+
+</html>
