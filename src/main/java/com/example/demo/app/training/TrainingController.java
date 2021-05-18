@@ -35,7 +35,7 @@ public class TrainingController {
 		model.addAttribute("trainingList", list);
 		model.addAttribute("title", "Training Index");
 
-		return "training/index_boot";
+		return "training/index";
 	}
 
 	@GetMapping("/form") //URLでアクセス。
